@@ -77,9 +77,6 @@ class TestVarasto(unittest.TestCase):
         varasto = Varasto(-2, 0)
         self.assertAlmostEqual(varasto.tilavuus, 0)
         self.assertAlmostEqual(varasto.saldo, 0)
-        # Hajoaa, koska alku_saldo{0} < 0 == false,
-        # alku_saldo{0} <= tilavuus{-2} == false
-        # joten saldo = tilavuus{-2} (eikä self.tilavuus joka on nollattu)  
 
     def test_konstruktori_alkusaldo_negatiivinen(self):
         varasto = Varasto(10, -6)
